@@ -25,11 +25,9 @@ public class MovementHandler : MonoBehaviour
     /// </param>
     public void MovementInput(InputAction.CallbackContext context)
     {
-        Vector2 intention = context.ReadValue<Vector2>();
+        Vector2 intention = context.ReadValue<Vector2>() * m_speed;
         if (intention == Vector2.zero)
             m_playerBody.velocity = Vector2.zero;
-
-        intention *= m_speed;
 
         float angle = m_playerBody.transform.rotation.eulerAngles.y;
         intention = Utils.RotateVec2(intention, angle);

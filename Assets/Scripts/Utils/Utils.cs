@@ -27,6 +27,8 @@ public static class Utils
     /// <returns></returns>
     public static Vector2 RotateVec2(Vector2 vec, float angle)
     {
+        angle *= -1;
+
         return new Vector2(
             vec.x * Mathf.Cos(angle * Mathf.Deg2Rad) -
             vec.y * Mathf.Sin(angle * Mathf.Deg2Rad),
