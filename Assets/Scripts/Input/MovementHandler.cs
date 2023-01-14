@@ -12,8 +12,9 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class MovementHandler : MonoBehaviour
 {
-    public Rigidbody m_playerBody;
+    public Transform m_player;
     public float m_speed = 5;
+    private Vector2 m_intention = Vector2.zero;
 
     /// <summary>
     /// This is the listener to be added to the corresponding movement
@@ -25,13 +26,15 @@ public class MovementHandler : MonoBehaviour
     /// </param>
     public void MovementInput(InputAction.CallbackContext context)
     {
-        Vector2 intention = context.ReadValue<Vector2>() * m_speed;
-        if (intention == Vector2.zero)
-            m_playerBody.velocity = Vector2.zero;
+        m_intention = context.ReadValue<Vector2>() * m_speed;
+    }
 
-        float angle = m_playerBody.transform.rotation.eulerAngles.y;
-        intention = Utils.RotateVec2(intention, angle);
-
-        m_playerBody.velocity = new Vector3(intention.x, 0, intention.y);
+    void Update()
+    {
+        m_player.Translate(
+            m_intention.x * Time.deltaTime,
+            0,
+            m_intention.y * Time.deltaTime
+            );
     }
 }
