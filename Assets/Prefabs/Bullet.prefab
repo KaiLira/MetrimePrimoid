@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2922144159493569425}
   - component: {fileID: 4499990012085074898}
   - component: {fileID: 799582103920674033}
+  - component: {fileID: 3450623425409467839}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -100,7 +101,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.6388306, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 2.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -188,3 +189,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26540d5253ed95d4a8cf6fe270c212c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3450623425409467839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4262098653047275155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1022c260a07d4a4b936bf16a2d187ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lifeSpan: 2
