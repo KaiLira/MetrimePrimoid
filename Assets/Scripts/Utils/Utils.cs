@@ -37,4 +37,12 @@ public static class Utils
             vec.y * Mathf.Cos(angle * Mathf.Deg2Rad)
         );
     }
+
+    /// <summary>
+    /// Returns whether two numbers are within a certain margin of each other
+    /// </summary>
+    public static bool ApproxEq(float left, float right, float margin)
+    {
+        return left <= right + margin && left >= right - margin;
+    }
 }
