@@ -15,27 +15,30 @@ public class LookHandler : MonoBehaviour
     private Vector2 m_intention = Vector2.zero;
 
     /// <summary>
-    /// Each frame, the rotation of the player's and camera's rotation are updated,
-    /// The whole player is rotated for horizontal rotation and only the camera
-    /// is rotated for vertical rotation, so as to not generate weird stuff with
-    /// collisions while looking up or down.
+    /// Each frame, it rotates the player and camera acording to the intention,
+    /// yaw is modified by rotating the whole player so that movement is always
+    /// relative towards where you're looking, pitch is handled by rotating the
+    /// camera so that the player can't fly by just looking up.
     /// 
-    /// Camera rotation is also clamped so you cannot "backflip"
+    /// Pitch is clamped to avoid the player flipping.
     /// </summary>
     void Update()
     {
         m_player.Rotate(new Vector3(0, m_intention.x * Time.deltaTime, 0));
-        m_camera.Rotate(new Vector3(-m_intention.y * Time.deltaTime, 0, 0));
 
         float pitch = m_camera.rotation.eulerAngles.x;
-        if (pitch < -89)
+        float pitchDelta = -m_intention.y * Time.deltaTime;
+        if (pitch < 180 && pitch + pitchDelta > 89)
         {
-            m_camera.localRotation = Quaternion.Euler(new Vector3(-89, 0, 0));
+            m_camera.localRotation = Quaternion.Euler(89, 0, 0);
         }
-
-        if (pitch > 89)
+        else if (pitch > 180 && pitch + pitchDelta < 360 - 89)
         {
-            m_camera.localRotation = Quaternion.Euler(new Vector3(89, 0, 0));
+            m_camera.localRotation = Quaternion.Euler(-89, 0, 0);
+        }
+        else
+        {
+            m_camera.Rotate(pitchDelta, 0, 0);
         }
     }
 
