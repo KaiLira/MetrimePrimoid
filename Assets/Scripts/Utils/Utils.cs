@@ -30,9 +30,9 @@ public static class Utils
         pitch *= Mathf.Deg2Rad;
         yaw *= Mathf.Deg2Rad;
 
-        float x = magnitude * Mathf.Cos(yaw) * Mathf.Sin(pitch);
-        float y = magnitude * Mathf.Cos(yaw) * Mathf.Cos(pitch);
-        float z = magnitude * Mathf.Sin(yaw);
+        float x = magnitude * Mathf.Cos(pitch) * Mathf.Cos(yaw);
+        float y = magnitude * Mathf.Sin(pitch);
+        float z = magnitude * Mathf.Cos(pitch) * Mathf.Sin(yaw);
 
         return new Vector3(x, y, z);
     }

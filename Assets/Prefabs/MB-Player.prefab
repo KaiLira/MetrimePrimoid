@@ -223,6 +223,7 @@ MonoBehaviour:
   m_targetYaw: 0
   m_targetDistance: 5
   m_speed: 10
+  m_sensitivity: 50
 --- !u!81 &8283180939154717500
 AudioListener:
   m_ObjectHideFlags: 0
@@ -308,7 +309,19 @@ MonoBehaviour:
     m_ActionId: 21173b96-91e2-4d47-9bfb-ca7225a1a8bd
     m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7945266940534770926}
+        m_TargetAssemblyTypeName: MBCameraHandler, Assembly-CSharp
+        m_MethodName: LookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c1e613dc-8b5b-4561-a348-83b4321984ee
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
