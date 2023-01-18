@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles Camera movement for the morph ball, including following the
+/// player around, changing the angle according to input as well as
+/// moving to avoid obstructions.
+/// </summary>
 public class MBCameraHandler : MonoBehaviour
 {
     public Transform m_morphBall;
