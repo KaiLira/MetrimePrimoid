@@ -8,14 +8,33 @@ public static class Utils
     /// Creates a new Vector2 using an angle and a magnitude
     /// </summary>
     /// <param name="angle">The angle of the Vector2 in degrees</param>
-    /// <param name="magnitude">The magnitude of the  Vector2</param>
+    /// <param name="magnitude">The magnitude of the Vector2</param>
     /// <returns></returns>
-    public static Vector2 VecFromComps(float angle, float magnitude)
+    public static Vector2 Vec2FromComps(float angle, float magnitude)
     {
         float x = Mathf.Cos(angle * Mathf.Deg2Rad) * magnitude;
         float y = Mathf.Sin(angle * Mathf.Deg2Rad) * magnitude;
 
         return new Vector2(x, y);
+    }
+
+    /// <summary>
+    /// Creates a new Vector3 using the provided angles and magnitude
+    /// </summary>
+    /// <param name="pitch">The pitch of the vector in degrees</param>
+    /// <param name="yaw">The yaw of the vector in degrees</param>
+    /// <param name="magnitude">The magnitude of the vector</param>
+    /// <returns></returns>
+    public static Vector3 Vec3FromComps(float pitch, float yaw, float magnitude)
+    {
+        pitch *= Mathf.Deg2Rad;
+        yaw *= Mathf.Deg2Rad;
+
+        float x = magnitude * Mathf.Cos(yaw) * Mathf.Sin(pitch);
+        float y = magnitude * Mathf.Cos(yaw) * Mathf.Cos(pitch);
+        float z = magnitude * Mathf.Sin(yaw);
+
+        return new Vector3(x, y, z);
     }
 
     /// <summary>
