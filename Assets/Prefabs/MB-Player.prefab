@@ -329,7 +329,19 @@ MonoBehaviour:
     m_ActionId: d345a7de-d292-4f47-b1fb-09f68bca1edc
     m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4650443400341758870}
+        m_TargetAssemblyTypeName: ChargeButtonInput, Assembly-CSharp
+        m_MethodName: ButtonInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b6cdf6d9-0c56-4429-ba6f-822e3e6c3df0
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
@@ -387,6 +399,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6767390128717172153}
   - component: {fileID: 1622050236838004297}
+  - component: {fileID: 4650443400341758870}
+  - component: {fileID: 4944906399820857132}
   m_Layer: 0
   m_Name: RollState
   m_TagString: Untagged
@@ -424,4 +438,48 @@ MonoBehaviour:
   m_morphBall: {fileID: 8322537936013305714}
   m_camera: {fileID: 5483643936911170420}
   m_force: 10
-  m_maxSpeed: 7
+  m_maxSpeed: 10
+  m_clampingVel: 1
+--- !u!114 &4650443400341758870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093140123228622822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d7e3fc028f961409fb216d834a0779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxTime: 1
+  m_buttonInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4944906399820857132}
+        m_TargetAssemblyTypeName: MBBoostInput, Assembly-CSharp
+        m_MethodName: ChargeButtonInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4944906399820857132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093140123228622822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18e15c492ad3a64ea8ac4c735b541b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mvHndlr: {fileID: 1622050236838004297}
+  m_morphBall: {fileID: 8322537936013305714}
+  m_speed: 25

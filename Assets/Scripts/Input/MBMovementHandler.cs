@@ -14,6 +14,8 @@ public class MBMovementHandler : MonoBehaviour
     public float m_force;
     public float m_maxSpeed;
     private Vector2 m_intention = Vector2.zero;
+    [HideInInspector]
+    public bool m_clampingVel = true;
 
     public void MoveInput(InputAction.CallbackContext context)
     {
@@ -28,7 +30,10 @@ public class MBMovementHandler : MonoBehaviour
 
         m_morphBall.AddForce(flatForce.x, 0, flatForce.y);
 
-        m_morphBall.velocity = Vector3.ClampMagnitude
-            (m_morphBall.velocity, m_maxSpeed);
+        if (m_clampingVel)
+            m_morphBall.velocity = Vector3.ClampMagnitude
+                (m_morphBall.velocity, m_maxSpeed);
+        else
+            m_clampingVel = m_morphBall.velocity.magnitude < m_maxSpeed * 0.9f;
     }
 }

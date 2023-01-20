@@ -20,7 +20,7 @@ public class ChargeButtonInput : MonoBehaviour
         m_isPressed = context.ReadValueAsButton();
         if (!m_isPressed)
         {
-            m_buttonInput?.Invoke(Mathf.Clamp01(m_maxTime / m_currentTime));
+            m_buttonInput?.Invoke(Mathf.Clamp01(m_currentTime / m_maxTime));
             m_currentTime = 0;
         }
     }
