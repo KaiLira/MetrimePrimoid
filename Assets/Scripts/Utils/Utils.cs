@@ -39,7 +39,7 @@ public static class Utils
 
     /// <summary>
     /// Takes a Vector and adds the given angle, returning a resulting vector with the
-    /// same magnitude but a diferent direction
+    /// same magnitude but a diferent m_direction
     /// </summary>
     /// <param name="vec">The vector to rotate</param>
     /// <param name="angle">The angle in degrees to be added</param>

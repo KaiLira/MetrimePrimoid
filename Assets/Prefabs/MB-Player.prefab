@@ -325,7 +325,19 @@ MonoBehaviour:
     m_ActionId: c1e613dc-8b5b-4561-a348-83b4321984ee
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 215566919405364614}
+        m_TargetAssemblyTypeName: MBBombHandler, Assembly-CSharp
+        m_MethodName: FireInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d345a7de-d292-4f47-b1fb-09f68bca1edc
     m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
@@ -401,6 +413,7 @@ GameObject:
   - component: {fileID: 1622050236838004297}
   - component: {fileID: 4650443400341758870}
   - component: {fileID: 4944906399820857132}
+  - component: {fileID: 215566919405364614}
   m_Layer: 0
   m_Name: RollState
   m_TagString: Untagged
@@ -483,3 +496,17 @@ MonoBehaviour:
   m_mvHndlr: {fileID: 1622050236838004297}
   m_morphBall: {fileID: 8322537936013305714}
   m_speed: 25
+--- !u!114 &215566919405364614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093140123228622822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6a5cbee62c9534f8b2935086d4d809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 919132149155446097, guid: 4ff2583b87c91eb48812c63c2292698e, type: 3}
+  morphBall: {fileID: 5093327785163515701}
