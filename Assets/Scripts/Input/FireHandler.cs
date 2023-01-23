@@ -10,7 +10,7 @@ public class FireHandler : MonoBehaviour
 
     public void FireInput(InputAction.CallbackContext context)
     {
-        if (!context.ReadValueAsButton())
+        if (!context.ReadValueAsButton() || !gameObject.activeInHierarchy)
             return;
 
         var bullet = Instantiate(m_bulletPrefab);

@@ -20,7 +20,7 @@ public class MBBombHandler : MonoBehaviour
     public void FireInput(InputAction.CallbackContext context)
     {
         doubleInputCorrector = !doubleInputCorrector;
-        if (!context.ReadValueAsButton() || doubleInputCorrector)
+        if (!context.ReadValueAsButton() || doubleInputCorrector || !gameObject.activeInHierarchy)
             return;
 
         if (currentAmmo > 0)

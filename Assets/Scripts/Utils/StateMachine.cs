@@ -6,7 +6,7 @@ public class StateMachine : MonoBehaviour
 {
     [SerializeField]
     private GameObject _defaultState;
-    private Stack<GameObject> _states = new();
+    public Stack<GameObject> _states = new();
 
     void Start()
     {
