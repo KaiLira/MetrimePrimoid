@@ -11,7 +11,13 @@ public class Attack : State
 
     public override void OnEnter()
     {
+        m_PlayerDetection = gameObject.GetComponent<Detection>();
         m_Muzzle = transform.Find("Muzzle");
-        Resources.Load("Assets/Prefabs/Bullet.prefab");
+        Resources.Load("");
+    }
+
+    public override void OnUpdate()
+    {
+        base.OnUpdate();
     }
 }
