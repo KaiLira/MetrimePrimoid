@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1163525481806457815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 75.09, y: 75.09, z: 75.09}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1337832948150133397}
@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 1247269686264062752}
   - component: {fileID: 7846846317123474401}
   - component: {fileID: 146888131814749483}
-  - component: {fileID: 192029193002832782}
   m_Layer: 0
   m_Name: MB-Bomb
   m_TagString: Untagged
@@ -132,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1022c260a07d4a4b936bf16a2d187ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_delay: 0.6
+  m_delay: 1
   m_event:
     m_PersistentCalls:
       m_Calls:
@@ -148,18 +147,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 192029193002832782}
-        m_TargetAssemblyTypeName: Printer, Assembly-CSharp
-        m_MethodName: Print
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Delay One
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &7846846317123474401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1022c260a07d4a4b936bf16a2d187ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_delay: 0.65
+  m_delay: 1.05
   m_event:
     m_PersistentCalls:
       m_Calls:
@@ -188,18 +175,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 192029193002832782}
-        m_TargetAssemblyTypeName: Printer, Assembly-CSharp
-        m_MethodName: Print
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Delay Two
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &146888131814749483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,18 +185,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44abab937e1b6da469cdbe80d3bec0ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &192029193002832782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033856555867041557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11b79b037a7d1a4a8fa170b40c67606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5009198664069582137
@@ -284,4 +247,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_direction: {x: 0, y: 1, z: 0}
-  m_speed: 10
+  m_speed: 7

@@ -14,7 +14,7 @@ public class MBBombHandler : MonoBehaviour
     private const int maxAmmo = 3;
     private int currentAmmo = maxAmmo;
     private float timeSinceFire = 0f;
-    private const float reloadTime = 2f;
+    private const float reloadTime = 3f;
     private bool doubleInputCorrector = true;
 
     public void FireInput(InputAction.CallbackContext context)
