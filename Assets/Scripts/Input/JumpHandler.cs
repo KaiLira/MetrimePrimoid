@@ -12,8 +12,8 @@ public class JumpHandler : MonoBehaviour
     public float m_strength = 10f;
 
     /// <summary>
-    /// Listener for the PlayerInput's "Jump" event, when pressed it adds a force upward
-    /// to the player, if released mid-jump, it zeroes the vertical speed of the player.
+    /// Listener for the PlayerInput's "Jump" event, when pressed it adds a m_speed upward
+    /// to the player, if released mid-jump, it zeroes the vertical m_speed of the player.
     /// </summary>
     /// <param name="context">Automatically passed context in the PlayerInput event</param>
     public void JumpInput(InputAction.CallbackContext context)

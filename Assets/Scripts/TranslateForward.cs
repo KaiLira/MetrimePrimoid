@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Moves the object it's attatched to forward at the set speed
+/// Moves the object it's attatched to forward at the set m_speed
 /// </summary>
 public class TranslateForward : MonoBehaviour
 {
