@@ -8,17 +8,17 @@ using UnityEngine.InputSystem.Interactions;
 /// <summary>
 /// Handles swapping between the fps and morph ball players
 /// </summary>
-[RequireComponent(typeof(StateMachine))]
+[RequireComponent(typeof(ScrStateMachine))]
 public class SwapHandler : MonoBehaviour
 {
     public GameObject fpsState;
     public GameObject mbState;
-    private StateMachine sm;
+    private ScrStateMachine sm;
     private Transform fpsPos, mbPos;
 
     void Start()
     {
-        sm = GetComponent<StateMachine>();
+        sm = GetComponent<ScrStateMachine>();
         fpsPos = fpsState.GetComponentInChildren<Rigidbody>().transform;
         mbPos = mbState.GetComponentInChildren<Rigidbody>().transform;
     }

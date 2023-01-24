@@ -4,7 +4,7 @@ using UnityEngine;
 using PathCreation;
 using Unity.VisualScripting;
 
-public class StateMachine : MonoBehaviour
+public class ScrStateMachine : MonoBehaviour
 {
     public State m_Patrol;
     //private State m_FollowTarget;
@@ -19,7 +19,7 @@ public class StateMachine : MonoBehaviour
         m_Current.OnEnter();
     }
 
-    private void Start()
+    void Start()
     {
         m_Patrol = gameObject.AddComponent<Patrol>();
         m_Patrol.SetFSM(this);

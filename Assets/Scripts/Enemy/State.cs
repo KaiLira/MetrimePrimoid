@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    public StateMachine m_StateMachine;
+    public ScrStateMachine m_StateMachine;
     public virtual void OnEnter()
     {
 
@@ -20,7 +20,7 @@ public class State : MonoBehaviour
 
     }
     
-    public virtual void SetFSM(StateMachine FSM)
+    public virtual void SetFSM(ScrStateMachine FSM)
     {
         m_StateMachine = FSM;
     }
