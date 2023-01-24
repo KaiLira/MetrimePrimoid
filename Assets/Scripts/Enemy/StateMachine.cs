@@ -2,23 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using Unity.VisualScripting;
 
 public class StateMachine : MonoBehaviour
 {
-    public PathCreator m_PathCreator;
-    public EndOfPathInstruction end;
-    public float Speed;
-    float dstTravelled;
-
-    //private State m_Patrol;
+    public State m_Patrol;
     //private State m_FollowTarget;
-    //private State m_AttackTarget;
+    public State m_AttackTarget;
 
-    private void Update()
+    public State m_Current;
+
+    public void SetState(State NewCurrent)
     {
-        dstTravelled += Speed + Time.deltaTime;
-        transform.position = m_PathCreator.path.GetPointAtDistance(dstTravelled, end);
-        transform.rotation = m_PathCreator.path.GetRotationAtDistance(dstTravelled, end);
+        m_Current.OnExit();
+        m_Current = NewCurrent;
+        m_Current.OnEnter();
     }
 
+    private void Start()
+    {
+        m_Patrol = gameObject.AddComponent<Patrol>();
+        m_Patrol.SetFSM(this);
+
+        m_AttackTarget = gameObject.AddComponent<Attack>();
+        m_AttackTarget.SetFSM(this);
+
+        m_Current = m_Patrol;
+        m_Current.OnEnter();
+    }
+    private void Update()
+    {
+        m_Current.OnUpdate();
+    }
 }

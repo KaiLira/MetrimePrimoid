@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public StateMachine m_StateMachine;
+    public virtual void OnEnter()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void OnUpdate()
     {
-        
+
+    }
+
+    public virtual void OnExit()
+    {
+
+    }
+    
+    public virtual void SetFSM(StateMachine FSM)
+    {
+        m_StateMachine = FSM;
     }
 }
