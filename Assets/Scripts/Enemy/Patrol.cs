@@ -18,7 +18,7 @@ public class Patrol : State
     {
         m_PlayerDetection = transform.Find("Detection").GetComponent<Detection>();
         m_PathCreator = GameObject.Find("PathCreator").GetComponent<PathCreator>();
-        m_MaxSpeed = .3f;
+        m_MaxSpeed = .2f;
         m_MinSpeed = 0.0f;
         m_Interpolater = 0.0f;
         m_Speed = 0;
