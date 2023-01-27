@@ -386,11 +386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280084286411738572, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6805496
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 6280084286411738572, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.48175
+      value: -3.53
       objectReference: {fileID: 0}
     - target: {fileID: 6280084286411738572, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -494,7 +494,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
