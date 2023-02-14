@@ -15,12 +15,20 @@ public class ChargeButtonInput : MonoBehaviour
     private bool m_isPressed;
     public UnityEvent<float> m_buttonInput;
 
+    public float ChargeRate
+    {
+        get
+        {
+            return Mathf.Clamp01(m_currentTime / m_maxTime);
+        }
+    }
+
     public void ButtonInput(InputAction.CallbackContext context)
     {
         m_isPressed = context.ReadValueAsButton();
         if (!m_isPressed)
         {
-            m_buttonInput?.Invoke(Mathf.Clamp01(m_currentTime / m_maxTime));
+            m_buttonInput?.Invoke(ChargeRate);
             m_currentTime = 0;
         }
     }

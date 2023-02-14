@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 847977428}
   - component: {fileID: 847977430}
   - component: {fileID: 1259816687}
+  - component: {fileID: 7883267526978961553}
   - component: {fileID: 1014930864}
   m_Layer: 0
   m_Name: RunState
@@ -78,6 +79,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 1696440176}
   m_strength: 175
+--- !u!114 &7883267526978961553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847977427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d7e3fc028f961409fb216d834a0779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxTime: 1.5
+  m_buttonInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1014930864}
+        m_TargetAssemblyTypeName: FireHandler, Assembly-CSharp
+        m_MethodName: FireInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014930864
 MonoBehaviour:
   m_ObjectHideFlags: 0
