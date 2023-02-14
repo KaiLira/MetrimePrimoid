@@ -8,19 +8,17 @@ public class FireHandler : MonoBehaviour
 {
     public Transform m_muzzle;
     public GameObject m_bulletPrefab;
-    private bool doubleInputCorrection = false;
 
-    public void FireInput(InputAction.CallbackContext context)
+    public void FireInput(float charge)
     {
-        doubleInputCorrection = !doubleInputCorrection;
+        if (charge < 0.95f)
+        {
+            var bullet = Instantiate(m_bulletPrefab);
+            bullet.transform.SetPositionAndRotation(m_muzzle.position, m_muzzle.rotation);
+        }
+        else
+        {
 
-        if (!context.ReadValueAsButton() ||
-            !doubleInputCorrection ||
-            !gameObject.activeInHierarchy
-            )
-            return;
-
-        var bullet = Instantiate(m_bulletPrefab);
-        bullet.transform.SetPositionAndRotation(m_muzzle.position, m_muzzle.rotation);
+        }
     }
 }
