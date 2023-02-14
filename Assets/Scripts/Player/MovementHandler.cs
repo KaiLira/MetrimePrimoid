@@ -12,8 +12,9 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class MovementHandler : MonoBehaviour
 {
-    public Rigidbody m_player;
+    public CharacterController m_player;
     public float m_speed = 5;
+    public float m_gravity = 10;
     private Vector2 m_intention = Vector2.zero;
 
     /// <summary>
@@ -29,12 +30,14 @@ public class MovementHandler : MonoBehaviour
         m_intention = context.ReadValue<Vector2>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        var prevY = m_player.velocity.y;
+        var prevY = m_player.velocity.y - m_gravity;
         var flatVel = Utils.RotateVec2
             (m_intention, m_player.transform.rotation.eulerAngles.y) * m_speed;
 
-        m_player.velocity = new Vector3(flatVel.x, prevY, flatVel.y);
+        var motion = new Vector3(flatVel.x, prevY, flatVel.y) * Time.deltaTime;
+
+        m_player.Move(motion);
     }
 }
