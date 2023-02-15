@@ -175,8 +175,8 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 865629359491402024}
-        m_TargetAssemblyTypeName: JumpHandler, Assembly-CSharp
+      - m_Target: {fileID: 865629357991662611}
+        m_TargetAssemblyTypeName: MovementHandler, Assembly-CSharp
         m_MethodName: JumpInput
         m_Mode: 0
         m_Arguments:
@@ -447,17 +447,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db05155f6861d524f95064cc886ad286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &865629359491402024 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1259816687, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
-  m_PrefabInstance: {fileID: 865629358234341319}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4f7d775ec050a41a86c8a051dad2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6567376571452129801 stripped

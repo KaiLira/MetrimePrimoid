@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 847977429}
   - component: {fileID: 847977428}
   - component: {fileID: 847977430}
-  - component: {fileID: 1259816687}
   - component: {fileID: 7883267526978961553}
   - component: {fileID: 1014930864}
   m_Layer: 0
@@ -50,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 5989528741074888062}
   m_speed: 5
+  m_gravity: 2
+  m_jumpForce: 200
 --- !u!114 &847977430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,20 +66,6 @@ MonoBehaviour:
   m_player: {fileID: 6280084286411738572}
   m_camera: {fileID: 6280084287154896855}
   m_sensitivity: 100
---- !u!114 &1259816687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847977427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4f7d775ec050a41a86c8a051dad2b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_player: {fileID: 0}
-  m_strength: 175
 --- !u!114 &7883267526978961553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,7 +391,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1259816687}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: JumpHandler, Assembly-CSharp
         m_MethodName: JumpInput
         m_Mode: 0
