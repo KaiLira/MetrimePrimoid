@@ -315,7 +315,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 847977428, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_gravity
-      value: 10
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 847977428, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_jumpForce
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1696440177, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_ActionEvents.Array.size

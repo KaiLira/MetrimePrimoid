@@ -18,6 +18,7 @@ public class MovementHandler : MonoBehaviour
     public float m_jumpForce;
     private Vector2 m_intention = Vector2.zero;
     private float prevYSpd = 0;
+    private Vector2 flatVel = Vector2.zero;
 
     /// <summary>
     /// This is the listener to be added to the corresponding movement
@@ -48,8 +49,16 @@ public class MovementHandler : MonoBehaviour
 
     private void Update()
     {
-        var flatVel = Utils.RotateVec2
-            (m_intention, m_player.transform.rotation.eulerAngles.y) * m_speed;
+        if (m_intention == Vector2.zero)
+        {
+            if (m_player.isGrounded)
+                flatVel = Vector2.zero;
+            else
+                flatVel *= 0.99f;
+        }
+        else
+            flatVel = Utils.RotateVec2
+                (m_intention, m_player.transform.rotation.eulerAngles.y) * m_speed;
 
         if (!m_player.isGrounded)
         {
