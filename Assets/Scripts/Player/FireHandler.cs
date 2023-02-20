@@ -6,19 +6,48 @@ using UnityEngine.InputSystem.Interactions;
 
 public class FireHandler : MonoBehaviour
 {
+    [Range(0f, 1f)]
+    public float m_minCharge;
+    [Range(0f, 1f)]
+    public float m_maxCharge;
+    public AnimationCurve m_growthCurve;
     public Transform m_muzzle;
     public GameObject m_bulletPrefab;
+    public GameObject m_pushPrefab;
 
-    public void FireInput(float charge)
+    private bool m_pressing = false;
+    private float m_charge = 0f;
+
+    public void FireInput(InputAction.CallbackContext context)
     {
-        if (charge < 0.95f)
+        if (context.phase == InputActionPhase.Performed)
         {
-            var bullet = Instantiate(m_bulletPrefab);
-            bullet.transform.SetPositionAndRotation(m_muzzle.position, m_muzzle.rotation);
-        }
-        else
-        {
+            if (context.ReadValueAsButton())
+                m_pressing = true;
+            else
+            {
+                if (m_charge < m_minCharge)
+                    Instantiate(m_bulletPrefab, m_muzzle.position, m_muzzle.rotation);
 
+                else
+                {
+                    var push = Instantiate
+                        (m_pushPrefab, m_muzzle);
+                    push.GetComponent<PowerSetter>().SetPower(
+                        m_growthCurve.Evaluate
+                        (Mathf.Clamp01((m_charge - m_minCharge) / m_maxCharge))
+                        );
+                }
+
+                m_pressing = false;
+                m_charge= 0f;
+            }
         }
+    }
+
+    private void Update()
+    {
+        if (m_pressing)
+            m_charge += Time.deltaTime;
     }
 }

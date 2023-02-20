@@ -321,6 +321,74 @@ PrefabInstance:
       propertyPath: m_jumpForce
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_maxCharge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_minCharge
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[0].time
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].time
+      value: 0.99582523
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].value
+      value: 0.49763733
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[0].inSlope
+      value: 1.1410878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].inSlope
+      value: -0.02134222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[2].inSlope
+      value: -Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[0].outSlope
+      value: 1.1410878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.13334055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].outSlope
+      value: -0.02134222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[2].outSlope
+      value: -Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[0].outWeight
+      value: 0.046448413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014930864, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+      propertyPath: m_growthCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 1696440177, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 15
@@ -431,6 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1696440177, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
+    - {fileID: 7883267526978961553, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
 --- !u!114 &865629357991662609 stripped
 MonoBehaviour:
@@ -470,22 +539,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6280084286411738574, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
   m_PrefabInstance: {fileID: 865629358234341319}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &120394588
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6567376571452129801}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &6567376571452129803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6280084286411738572, guid: b691623ebc26e4647839f0a05378baa2, type: 3}
