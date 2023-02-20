@@ -231,10 +231,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7824753648676844136, guid: 0f1cc1c5cef3b714da8048af6547fa99, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.8100014
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f1cc1c5cef3b714da8048af6547fa99, type: 3}
       propertyPath: m_Name
       value: MPChozoRuins

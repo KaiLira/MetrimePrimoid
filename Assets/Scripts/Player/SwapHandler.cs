@@ -19,7 +19,7 @@ public class SwapHandler : MonoBehaviour
     void Start()
     {
         sm = GetComponent<ObjStateMachine>();
-        fpsPos = fpsState.GetComponentInChildren<Rigidbody>().transform;
+        fpsPos = fpsState.GetComponentInChildren<CharacterController>().transform;
         mbPos = mbState.GetComponentInChildren<Rigidbody>().transform;
     }
 
