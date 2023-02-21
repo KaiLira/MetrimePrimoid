@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5965588333837934098}
+  - component: {fileID: 6495475009467580397}
   - component: {fileID: 3934949225608393403}
   - component: {fileID: 3778681817071444650}
-  - component: {fileID: 5712321522525631794}
+  - component: {fileID: 1596558752342863101}
   m_Layer: 0
   m_Name: Push
   m_TagString: Untagged
@@ -35,6 +36,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6495475009467580397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110466835385383838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2, y: 1.96, z: 2.19}
+  m_Center: {x: 0, y: 0, z: 1.26}
 --- !u!114 &3934949225608393403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36562efc9cb462049bb022bdbda0b32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_basePower: 0
   m_pushPower: 10
 --- !u!114 &3778681817071444650
 MonoBehaviour:
@@ -61,22 +76,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_delay: 0.25
+  autostart: 1
+  repeat: 0
   m_event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5712321522525631794}
-        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
-        m_MethodName: DestroyObject
-        m_Mode: 2
+      - m_Target: {fileID: 110466835385383838}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 110466835385383838}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5712321522525631794
+--- !u!114 &1596558752342863101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 110466835385383838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44abab937e1b6da469cdbe80d3bec0ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d2174d43908024aa7a3e26fd4d6e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6171012643227391086

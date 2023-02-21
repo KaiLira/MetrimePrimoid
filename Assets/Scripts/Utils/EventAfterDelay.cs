@@ -9,9 +9,17 @@ using UnityEngine.Events;
 public class EventAfterDelay : MonoBehaviour
 {
     public float m_delay;
+    public bool autostart = true;
+    public bool repeat = false;
     public UnityEvent m_event;
 
-    void Start()
+    void OnEnable()
+    {
+        if (autostart)
+            startTimer();
+    }
+
+    private void startTimer()
     {
         StartCoroutine(invokeAfter());
     }
@@ -20,5 +28,7 @@ public class EventAfterDelay : MonoBehaviour
     {
         yield return new WaitForSeconds(m_delay);
         m_event?.Invoke();
+        if (repeat)
+            startTimer();
     }
 }
