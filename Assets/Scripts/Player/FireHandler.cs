@@ -20,6 +20,9 @@ public class FireHandler : MonoBehaviour
 
     public void FireInput(InputAction.CallbackContext context)
     {
+        if (!isActiveAndEnabled)
+            return;
+
         if (context.phase == InputActionPhase.Performed)
         {
             if (context.ReadValueAsButton())

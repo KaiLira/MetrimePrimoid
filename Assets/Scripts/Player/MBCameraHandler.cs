@@ -16,6 +16,7 @@ public class MBCameraHandler : MonoBehaviour
     public float m_targetDistance;
     public float m_speed;
     public float m_sensitivity = 75;
+    public float m_clearRadius;
     private Vector2 m_intention = Vector2.zero;
 
     void FixedUpdate()
@@ -36,8 +37,9 @@ public class MBCameraHandler : MonoBehaviour
             + m_morphBall.position;
 
         // Check for collidiers obstructing view
-        if (Physics.Raycast(
+        if (Physics.SphereCast(
             m_morphBall.position,
+            m_clearRadius,
             (targetPos - m_morphBall.position),
             out RaycastHit hit,
             (targetPos - m_morphBall.position).magnitude
