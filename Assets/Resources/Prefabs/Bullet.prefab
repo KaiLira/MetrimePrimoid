@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 462444091875045602}
   - component: {fileID: 2922144159493569425}
   - component: {fileID: 4499990012085074898}
-  - component: {fileID: 799582103920674033}
   - component: {fileID: 3450623425409467839}
+  - component: {fileID: 2625824999286000106}
   - component: {fileID: 8549387758468336407}
   m_Layer: 0
   m_Name: Bullet
@@ -178,18 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &799582103920674033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4262098653047275155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26540d5253ed95d4a8cf6fe270c212c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3450623425409467839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +191,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_delay: 2
+  autostart: 1
+  repeat: 0
   m_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8549387758468336407}
+        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4262098653047275155}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2625824999286000106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4262098653047275155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81eda0f17051639469ec7c8bff36761b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  m_collided:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8549387758468336407}
