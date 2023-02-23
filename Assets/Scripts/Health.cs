@@ -16,6 +16,11 @@ public class Health : MonoBehaviour
     public UnityEvent<int> m_healed;
     public UnityEvent m_depleted;
 
+    private void Start()
+    {
+        m_health = m_maxHealth;
+    }
+
     /// <summary>
     /// Adds the specified amount to the health of the object
     /// and sends out the relevant UnityEvents, to deal damage,
