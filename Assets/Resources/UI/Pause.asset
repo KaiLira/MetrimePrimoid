@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8643f6c980d4d4d808faf894cc4b55, type: 3}
   m_Name: Pause
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 7631312914847887228, guid: 5d4677f04b3ff39419a66d4aa262b766, type: 3}
   blackScreen: {fileID: 0}
   gameOver: {fileID: 0}
