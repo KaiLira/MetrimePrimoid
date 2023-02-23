@@ -11,8 +11,11 @@ public class DamageOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Health>(out var health))
-            health.ChangeHealth(-damage);
+        other.SendMessage(
+            "ChangeHealth",
+            -damage,
+            SendMessageOptions.DontRequireReceiver
+            );
 
         m_collided?.Invoke();
     }
