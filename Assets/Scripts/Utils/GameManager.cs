@@ -99,4 +99,9 @@ public class GameManager : ScriptableObject
             ReloadScene();
         }
     }
+
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
 }
