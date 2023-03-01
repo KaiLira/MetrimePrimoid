@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 5989528741074888062}
-  m_speed: 5
+  m_speed: 7.5
   m_gravity: 2
   m_jumpForce: 6.6
 --- !u!114 &847977430
@@ -106,8 +106,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db05155f6861d524f95064cc886ad286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_minCharge: 0
+  m_maxCharge: 0
+  m_growthCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   m_muzzle: {fileID: 1542691621}
   m_bulletPrefab: {fileID: 4262098653047275155, guid: 3ee568ed77c6bad44b8fef8dd8a47c2b, type: 3}
+  m_pushObj: {fileID: 0}
 --- !u!1 &869136773
 GameObject:
   m_ObjectHideFlags: 0
