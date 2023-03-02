@@ -6,7 +6,7 @@ using UnityEngine;
 /// Lerps the rotation of the object it's attatched to so it's local
 /// positive Z it's facing towards the target.
 /// </summary>
-public class RotateTowardTarget : MonoBehaviour
+public class LookAtTransform : MonoBehaviour
 {
     public Transform m_target;
     public float m_turnRate;

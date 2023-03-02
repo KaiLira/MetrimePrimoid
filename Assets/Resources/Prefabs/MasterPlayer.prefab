@@ -750,6 +750,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 794314284386561669, guid: 2b8096888fd3ced4ba1fc57ab21a1a9e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5267028065050957567, guid: 2b8096888fd3ced4ba1fc57ab21a1a9e, type: 3}
       propertyPath: m_Name
       value: MB-Player
@@ -762,6 +766,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6317220139167502398, guid: 2b8096888fd3ced4ba1fc57ab21a1a9e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 7641957313567744215, guid: 2b8096888fd3ced4ba1fc57ab21a1a9e, type: 3}
       propertyPath: m_RootOrder
       value: 1
