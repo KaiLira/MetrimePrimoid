@@ -14,6 +14,9 @@ public class EventByDistance : MonoBehaviour
     private void Start()
     {
         prevDistance = (transform.position - targetHolder.Target.transform.position).magnitude;
+
+        if (prevDistance <= range)
+            rangeEntered?.Invoke();
     }
 
     private void Update()
