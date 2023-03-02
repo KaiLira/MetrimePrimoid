@@ -92,6 +92,139 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 7642946528650075063}
+--- !u!1 &2629522060172440046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8545046155507561303}
+  - component: {fileID: 3323872669799048872}
+  - component: {fileID: 2852586490132347632}
+  - component: {fileID: 2159891239115501329}
+  - component: {fileID: 541641558611348796}
+  m_Layer: 0
+  m_Name: ShootingState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8545046155507561303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629522060172440046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.537, z: 1.076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8586773452101878394}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3323872669799048872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629522060172440046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436a4c7e525ca1b4086f3ed6f40d4878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1908197343309475861}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pistol
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onDisable:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2852586490132347632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629522060172440046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1022c260a07d4a4b936bf16a2d187ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_delay: 1
+  autostart: 1
+  repeat: 1
+  m_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1908197343309475861}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shooting
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2159891239115501329}
+        m_TargetAssemblyTypeName: ObjectInstanciator, Assembly-CSharp
+        m_MethodName: MakeInstance
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4262098653047275155, guid: 3ee568ed77c6bad44b8fef8dd8a47c2b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2159891239115501329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629522060172440046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec368a6a701061b42af669cb5f41f34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &541641558611348796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629522060172440046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babf47e6f931286428036e118ff2dbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_holder: {fileID: 4383658095558435365}
+  m_self: {fileID: 8586773452101878394}
 --- !u!1 &2652932430743879091
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +324,7 @@ Transform:
   - {fileID: 5520124013758900847}
   - {fileID: 7534048064070631451}
   - {fileID: 2561987266155735862}
+  - {fileID: 8545046155507561303}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -236,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e451aa6d6793840a0b42fc4d12ac84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultState: {fileID: 1979804311801698983}
+  _defaultState: {fileID: 2629522060172440046}
 --- !u!114 &7700263542951941802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +499,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 574bcf5eff21de644ab2a4f9f37d8181, type: 3}
       propertyPath: m_Name
       value: Elite
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 574bcf5eff21de644ab2a4f9f37d8181, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 574bcf5eff21de644ab2a4f9f37d8181, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 574bcf5eff21de644ab2a4f9f37d8181, type: 3}
       propertyPath: m_Controller
