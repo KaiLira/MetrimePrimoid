@@ -11,19 +11,11 @@ public class TargetHolder : MonoBehaviour
     {
         get
         {
-            if (m_target == null)
-                m_findPlayer();
-
-            if (!m_target.activeInHierarchy)
+            if (m_target == null || !m_target.activeInHierarchy)
                 m_findPlayer();
 
             return m_target;
         }
-    }
-
-    private void Awake()
-    {
-        m_findPlayer();
     }
 
     private void m_findPlayer()
