@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 6280084286411738572}
   m_camera: {fileID: 6280084287154896855}
-  m_sensitivity: 20
+  m_sensitivity: 50
 --- !u!114 &1014930864
 MonoBehaviour:
   m_ObjectHideFlags: 0

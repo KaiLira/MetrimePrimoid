@@ -11,7 +11,7 @@ public class LookHandler : MonoBehaviour
 {
     public Transform m_player;
     public Transform m_camera;
-    public float m_sensitivity = 50f;
+    public float m_sensitivity;
     private Vector2 m_intention = Vector2.zero;
 
     /// <summary>
