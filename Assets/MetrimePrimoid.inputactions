@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Swap",
-                    "type": "Button",
-                    "id": "6958e041-5a0b-46c9-8907-80977826d18f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "dee7c80a-3bc1-4c44-abd7-39a67faa0b26",
@@ -209,7 +200,7 @@
                     "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "processors": "ScaleVector2(x=0.2,y=0.2)",
                     "groups": ";Keyboard&Mouse;Touch",
                     "action": "Look",
                     "isComposite": false,
@@ -300,28 +291,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "95ea0a03-dd57-4c15-b91f-ab3846d93f33",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Swap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bcdca574-9cf9-4a17-93aa-4e4fc2fc6d30",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Swap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
