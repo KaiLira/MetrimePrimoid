@@ -12,6 +12,7 @@ public class PauseHandler : MonoBehaviour
 {
     private bool doubleInputCorrection = false;
     private PlayerInput playerInput;
+    [SerializeField] private Canvas PauseMenu;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class PauseHandler : MonoBehaviour
         {
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
+            PauseMenu.gameObject.SetActive(false);
             playerInput.SwitchCurrentActionMap("Player");
         }
         // If unpaused, pause
@@ -37,6 +39,7 @@ public class PauseHandler : MonoBehaviour
         {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
+            PauseMenu.gameObject.SetActive(true);
             playerInput.SwitchCurrentActionMap("UI");
         }
     }
