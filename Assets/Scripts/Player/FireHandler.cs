@@ -14,6 +14,7 @@ public class FireHandler : MonoBehaviour
     public Transform m_muzzle;
     public GameObject m_bulletPrefab;
     public GameObject m_pushObj;
+    public AudioSource m_Audio;
 
     private bool m_pressing = false;
     private float m_charge = 0f;
@@ -30,7 +31,10 @@ public class FireHandler : MonoBehaviour
             else
             {
                 if (m_charge < m_minCharge)
+                {
                     Instantiate(m_bulletPrefab, m_muzzle.position, m_muzzle.rotation);
+                    m_Audio.Play();
+                }  
                 else
                 {
                     m_pushObj.GetComponent<PowerSetter>().SetPower(

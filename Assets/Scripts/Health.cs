@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 {
     public int m_maxHealth;
     private int m_health;
+    public AudioSource m_audioSource;
     // Is sent out when damage is taken,the integer
     // contains the new current HP
     public UnityEvent<int> m_damaged;
@@ -34,6 +35,7 @@ public class Health : MonoBehaviour
         if (m_health > 0)
             m_damaged?.Invoke(m_health);
         else
+            m_audioSource.Play();
             m_depleted?.Invoke();
     }
 }
