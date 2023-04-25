@@ -11,6 +11,8 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class MovementHandler : MonoBehaviour
 {
+    public AudioSource m_Audio;
+
     public CharacterController m_player;
     public float m_speed;
     public float m_gravity;
@@ -66,5 +68,10 @@ public class MovementHandler : MonoBehaviour
 
         var motion = new Vector3(flatVel.x, prevYSpd, flatVel.y) * Time.deltaTime;
         m_player.Move(motion);
+        m_Audio.Play();
+        if  (m_player.velocity.magnitude <= 0)
+        {
+            m_Audio.Pause();
+        }
     }
 }
